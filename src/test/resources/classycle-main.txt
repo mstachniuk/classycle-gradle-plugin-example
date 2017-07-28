@@ -1,0 +1,11 @@
+show allResults
+
+### sets definition
+{base-package} = com.example
+[project] = ${base-package}.*
+[services] = ${base-package}.services.*
+
+### check sets definition
+check sets [project] [services]
+
+check [project] directlyIndependentOf [services]
